@@ -1,6 +1,6 @@
 # esc_pos_utils_plus
 
-[![Pub Version](https://img.shields.io/pub/v/esc_pos_utils_plus)](https://pub.dev/packages/esc_pos_utils_plus)
+<!-- [![Pub Version](https://img.shields.io/pub/v/esc_pos_utils_plus)](https://pub.dev/packages/esc_pos_utils_plus) -->
 
 esc_pos_utils_plus is base Flutter/Dart classes for ESC/POS printing, based on [esc_pos_utils](https://github.com/andrey-ushakov/esc_pos_utils.git), giving some improvements to support more printers. `Generator` class generates ESC/POS commands that can be sent to a thermal printer.
 
