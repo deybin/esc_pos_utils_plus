@@ -367,9 +367,15 @@ class Generator {
   List<int> feed(int n) {
     List<int> bytes = [];
     if (n >= 0 && n <= 255) {
-      bytes += Uint8List.fromList(
-        List.from(cFeedN.codeUnits)..add(n),
-      );
+      if (_profile.manufacturer == "Escpos") {
+        bytes += Uint8List.fromList(
+          List.from(cFeedN.codeUnits)..add(n),
+        );
+      } else {
+        for (var i = 0; i <= n; i++) {
+          bytes += text(" ");
+        }
+      }
     }
     return bytes;
   }
