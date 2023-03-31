@@ -252,7 +252,7 @@ class Generator {
   List<int> setStyles(PosStyles styles, {bool isKanji = false}) {
     List<int> bytes = [];
     if (styles.align != _styles.align) {
-      if (_profile.manufacturer == "Generic") {
+      if (_profile.manufacturer == "Escpos") {
         bytes += latin1.encode(styles.align == PosAlign.left ? cAlignLeft : (styles.align == PosAlign.center ? cAlignCenter : cAlignRight));
       } else {
         bytes += styles.align == PosAlign.left ? PlusAling.left : (styles.align == PosAlign.center ? PlusAling.center : PlusAling.rigth);
